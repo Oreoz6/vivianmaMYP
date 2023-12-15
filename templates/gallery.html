@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Vivian's Project Gallery</title> 
+    <style> 
+        .end {
+            color: white; 
+            text-align: center; 
+            font-family: 'lato',sans-serif; 
+            font-weight: 300; 
+            font-size: 25px; 
+            font: bold; 
+            letter-spacing: 5px; 
+            text-shadow: #38495a 1px 2px 5px; 
+            background-image: url("https://img.freepik.com/free-vector/watercolor-sugar-cotton-clouds-background_52683-80661.jpg?w=1060&t=st=1702666547~exp=1702667147~hmac=557bf7dc2b91e7d58f46eb2a7967683700803e4244967a26ec901199ba4d4937"); 
+            background-repeat:no-repeat; 
+            background-size: cover; 
+        } 
+        body { 
+            font-size: 20px;
+            color:#FFF1EE; 
+            text-shadow: #38495a 1px 0px 1px; 
+            filter: brightness(110%); 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            text-indent: 10px; 
+            text-align: center;
+            margin:auto; 
+            max-width: 95%; 
+            background-image: linear-gradient(100deg, pink, salmon);  
+            backdrop-filter: brightness(85%); 
+        }
+        .scroll {
+            overflow:auto; 
+            text-align: center; 
+            align-items: center; 
+        }
+        .vivian{
+            filter: drop-shadow(5px 5px 2px pink); 
+        } 
+        .center_img{
+            padding-left: 10%; 
+            padding-right: 20%; 
+        }
+        a{ 
+            color: white; 
+        }
+        button {
+            padding: 10px 10px;  
+            border: none; 
+            text-shadow: rgb(233, 110, 96) 1px 0px 1px;
+            color: salmon; 
+            background-color: rgb(250, 228, 235); 
+            text-transform: uppercase;
+            margin: 0 10px 20px 0px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-family: "Comfortaa", sans-serif;
+            border-radius: 4px;
+            transition: all 0.25s ease; 
+            box-shadow: #38495a 1px 2px 5px; 
+        }
+        hr {
+            border-top: 1px solid lavenderblush; 
+            border-bottom: 1px solid lavenderblush; 
+        }
+    </style>
+</head>
+<body>
+    <div class="end">
+        <hr color="lightgray"> 
+        <h1><center>Welcome to my Project Gallery!</center></h1>
+        <hr color="lightgray">
+    </div> 
+    <b><a href="/"><button>Return to Homepage</button></a></b>
+    <p>Hi! This gallery documents my project from start to finish. It includes photos of my brainstorming, conducting survey, some data analysis results, and a link to selected portions of my final project report, if you are interested in reading it!</p> 
+    <br> 
+    <center><h2><b>...Brainstorming...</b></h2></center> 
+    <p><center>
+        My brain was much messier than this chart when planning for this project! 
+    </center></p>  
+    <div class = "scroll">
+        <center><img src={{ brainstorm_src }} height="700" width="2200"></center> 
+    </div><br><br> 
+    <center><h2><b>...Trying different distribution channels...</b></h2></center> 
+    <p><center>I tried channels such as Facebook groups, Reddit communities, Discord channels, Twitter, and more...</center></p> 
+    <br> 
+    <div style="display:flex" class="scroll"> 
+        <img src={{ fb_src }} class ="img-fluid" height="500" width="400" style="border:2px solid black"> 
+        <img src={{ reddit_src }} class ="img-fluid" height="500" width="450" style="border:2px solid black"> 
+        <img src={{ twitter_src }} class ="img-fluid" height="500" width="450" style="border:2px solid black"> 
+    </div>
+    <br> 
+   <center>
+        <h2><b>...Some Examples of Data Analysis...</b></h2>
+        <p>
+            I analyzed many things, including the distributions of responses in terms of time collected, investment types (all, self-directed only, and direct investment only), gender, age, ESG awareness, years of work experience, education level, seniority at work, industry of work, annual gross income, financial information souces, and current investment activness. I also plotted the training errors to find the best K and see the performance of predicting different letters in R, F, T, and M. 
+        </p>
+        <p>I also analyzed the relationship between different investment types and some demographic features to visualize any trends or correlations.</p>
+        <br>
+        <p>As shown below, as I started to find trends in which platform had the highest yield of responses, and focused my efforts there, more responses can flooding in with time.</p>
+        <p>K=5 seemed to have the smallest error, so that is the K I used for the final model.</p>
+        <p>Moreover, compartmentalizing the error for each letter, it seems that predictions for R is the best: although the error rate is still high at about 20%, it is generally lower than that of the other attributes.</p>
+        <div style="display:flex" class="scroll">
+            <img src={{ time_src }} class ="img-fluid" height="300" width="500"> 
+            <img src={{ k_src }} class ="img-fluid" height="300" width="400"> 
+            <img src={{ err_src }} class ="img-fluid" height="300" width="450"> 
+        </div> 
+        <br> 
+        <p>I found that the Chi-Squared Test between different genders and investment types is 0.00026, which is less than 0.05, meaning that there is a <b>significant correlation</b>! During data exploration and model construction, this boosted my confidence in the performance of the model, as at least gender seems to be a significant predictor.</p> 
+        <div style="display:flex" class="scroll">
+            <img src={{ gen_all_src }} class ="img-fluid" height="300" width="750"> 
+            <img src={{ gen_sd_src }} class ="img-fluid" height="300" width="750"> 
+            <img src={{ gen_di_src }} class ="img-fluid" height="300" width="750"> 
+        </div> 
+        <br> 
+        <p>As one can see from below, most respondents who chose the 'Self-directed' investment option is in the education industry, whereas those who haven't started working mostly chose to consult Asset Managers, which shows a lower risk appetite. This makes sense, because they have less experience and inital capital to invest.</p>   
+        <div style="display:flex" class="scroll">
+            <img src={{ ind_all_src }} class ="img-fluid" height="400" width="750"> 
+            <img src={{ ind_sd_src }} class ="img-fluid" height="400" width="750"> 
+            <img src={{ ind_di_src }} class ="img-fluid" height="400" width="750"> 
+        </div> 
+        <br> 
+        <p>Also, most respondents tend to have at least some consideration for ESG implications of their investment, as shown, a total of 67% of respondents chose "Very Much", "A Good Deal", or "Somewhat" for ESG considerations of their investments.</p> 
+        <p>In addition, my analysis showed that most respondents had relatively little investment experience, with most having currently invested &lt;10% of their net worth.</p> 
+        <div style="display:flex" class="scroll"> 
+            <img src={{ esg_src }} class ="img-fluid" height="350px" width="400px"> 
+            <br> 
+            <img src={{ currinv_src }} class ="img-fluid" height="350px" width="420px"> 
+            <br>
+            <img src={{ source_src }} class ="img-fluid" height="400px" width="550px">  
+        </div> 
+        
+    </center>
+    <br> 
+    <h3>...Project Report Under Construction...</h3><br> 
+    <div class = 'end'> 
+        <hr color="lightgray"> 
+        <br> 
+        <center>Thanks for viewing my gallery~</center>
+        <center><br><em>vivianma144@gmail.com</em><br></center><br> 
+        <div class = 'vivian'><center><img src={{ photo_src }} height="300" width="210"></center></div> 
+        <br> 
+        <hr color="lightgray"> 
+    </div> 
+    <br> 
+    <b><a href="/"><button>Return to Homepage</button></a></b> 
+    <br><br> 
+</body>
+</html>

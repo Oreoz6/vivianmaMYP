@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name="viewport" content="initial-scale=1, width=device-width">
+    <title>What is your RFTM?</title> 
+    <style>
+        .end {
+            color: #FFF; 
+            text-align: center; 
+            font-family: 'lato',sans-serif; 
+            font-weight: 300; 
+            font-size: 20px; 
+            letter-spacing: 5px; 
+            text-shadow: -webkit-linear-gradient(white, #38495a); 
+        } 
+        body { 
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            color:linen; 
+            text-align: center; 
+            margin:auto; 
+            max-width: 95%; 
+            background-color: #004282;
+            background-image: url("https://miro.medium.com/v2/resize:fit:1100/format:webp/1*WgzXAmMLR2fqSil53ZwSwQ.jpeg"); 
+            background-repeat: no-repeat; 
+            background-size: 2300px; 
+            text-shadow: #38495a 2px 0 10px;
+        }
+        .intro{
+            line-height: 40px; 
+            letter-spacing: 2px; 
+            font-size: 25px; 
+            max-width: 80%; 
+            text-align: justify;
+        }
+        .question{
+            font-family:'Times New Roman', Times, serif; 
+            font-size: 20px; 
+            color: grey; 
+            width: 800px; 
+            text-align: center; 
+            background-color: ghostwhite; 
+            box-shadow: #38495a 2px 0 10px;
+            border: #38495a; 
+        }
+        .add{
+            font-family:'Times New Roman', Times, serif; 
+            font-size: 20px; 
+            color: floralwhite; 
+            width: 50px; 
+            text-align: center; 
+            background-color: salmon; 
+            border-radius: 100%;
+            height: 50px; 
+            box-shadow:  #38495a 2px 0 10px;
+        }
+        a {
+            color: white; 
+            background-color: salmon; 
+            border-radius: 100%; 
+        }
+        .til{
+            background-color:none; 
+            background-image: 
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), 
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), 
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 10px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; 
+            color:linen; 
+        }
+    </style>
+</head>
+  <body> 
+    <div class="end"> 
+    <hr color="lightgray"><hr color="lightgray"> 
+    <div class="til">
+        <h1><center>Welcome to the RFTM Website!</center></h1> 
+    </div> 
+    <hr color="lightgray"><hr color="lightgray"> 
+    </div> 
+    <br> 
+    <center><div class="intro"> 
+        <b><p>Hi! This is Vivian, I'm a 10<sup>th</sup> grade student at the Elmwood School in Canada. I'm doing a project on everyone's <em>'investment-ality'</em>, categorized in the RFTM system I developed, and investigating whether that has any correlations with demographic features.</p></b> 
+    </div></center> 
+    <br> 
+    <p><b>To start, please answer a few questions about yourself. These questions will help me get an RFTM result for you!</b></p> 
+    <br> 
+    <div class="index"> 
+		<form action="{{ url_for('get_inputs') }}" method="get">
+            <select name="inputs" required class="question">
+                <option value="" disabled selected>What is your gender?</option>
+                {% for i in gen_options %}
+                    <option>{{ i }}</option> 
+                {% endfor %}
+            </select> 
+			<br><br> 
+			
+			<input name="inputs" type="text" placeholder="What is your age?" required class="question"> 
+			<br><br> 
+			
+			<input name="inputs" type="text" placeholder="How many years of work experience do you have? Please use numbers only." required  class="question"> 
+			<br><br> 
+			
+			<select name="inputs" required  class="question">
+                <option value="" disabled selected>What is your seniority at work?</option>
+                {% for i in sen_options %}
+                    <option>{{ i }}</option> 
+                {% endfor %}
+            </select>
+			<br><br> 
+
+			<select name="inputs" required  class="question">
+                <option value="" disabled selected>Which is the main industry you work in?</option>
+                {% for i in ind_options %}
+                    <option>{{ i }}</option> 
+                {% endfor %}
+            </select>
+			<br><br> 
+
+			<input name="inputs" type="text" placeholder="What is your annual gross income? Please use numbers only." required  class="question"> 
+			<br><br> 
+
+			<input name="inputs" type="text" placeholder="What % of your net worth is currently invested? Please use numbers only (E.g., 10% = 10)." required  class="question"> 
+			<br><br> 
+
+			<select name="inputs" required  class="question">
+                <option value="" disabled selected>What is your education level?</option>
+                {% for i in edu_options %}
+                    <option>{{ i }}</option> 
+                {% endfor %}
+            </select>
+			<br><br> 
+
+            <input type="submit" value="Add"  class="add"> 
+        </form>
+
+		<br> 
+    </div> 
+    <h3>
+        <b><a href="/gallery">Click to View Vivian's Project Gallery</a></b>
+    </h3><br> 
+    <h3><b>Credits and Acknowledgement</b><hr color="lightgray"> </h3> 
+    Thank you to <em>Fade_Dance</em> for your guidance and feedback on my project survey design! Without your help, my survey would not be as effective in collecting the information I need, and the investment options portion would not be structured as reasonably. 
+    <br><br> Thank you Ms. Rubarth for your support and oversight of my project! 
+    <br><br> Last but not least, thank you to everyone who participated in my survey, without your input my project would not have been possible and I would not have been able to perform data analysis and gain insight on correlations between investment preferences and demographic features. 
+    <br><br><br> 
+    <h3><b>Contact Details</b><hr color="lightgray"> </h3> 
+    Please feel free to contact me to share any thoughts, questions, or concerns using the email here: <em>vivianma144@gmail.com</em> 
+    <br><br><br> 
+  </body> 
+</html>

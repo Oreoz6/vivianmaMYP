@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+  <link href="https://fonts.cdnfonts.com/css/bubble-letters" rel="stylesheet"> 
+	<meta charset="UTF-8" name="viewport" content="initial-scale=1, width=device-width">
+    <title>Your RFTM Result Explained</title>
+</head> 
+<body> 
+    <hr class="h"> 
+    <h1><div class="head"><center>Your RFTM is <div class="bubhead">{{ text }}</div>. What does this mean?</center></div></h1> 
+    <hr class="h"> 
+    <center><div class="bub"> 
+        <p><b>The RFTM system stands for <em>Risk (R), (Focus), Term (T)</em>, and <em>Motive (M)</em></b></p> 
+    </div></center> 
+    <style>
+        table{
+          max-width: 1300px; 
+        } 
+        th, td {
+          border:5px solid blanchedalmond; 
+          border-radius: 10px; 
+          font-size: 18px; 
+          margin: 10px; 
+          font-family: Verdana, Geneva, Tahoma, sans-serif; 
+          padding: 10px; 
+          box-shadow: #38495a 1px 1px 2px; 
+        }
+        th{
+          backdrop-filter: brightness(50%); 
+          font-size: 22px; 
+        }
+        tr:nth-child(even) {
+          background-color: #E4D8D8; 
+          color: darkred; 
+          text-shadow: none;
+        }
+        tr:nth-child(odd) {
+          background-color: salmon; 
+          color: white; 
+        }
+        a{ 
+            color: white; 
+        }
+        .head{
+          letter-spacing: 10px; 
+          filter: brightness(110%); 
+          font-family: Verdana, Geneva, Tahoma, sans-serif; 
+          text-shadow: #38495a 1px 2px 2px; 
+        }
+        .letter-container{
+          font-size: 150px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif; 
+          color: red; 
+          text-align: center;
+          background-color: lightpink; 
+          float: left;
+          margin-right: 20px; 
+          border-radius: 15px; 
+          position: fixed right 10%; 
+          width:150px; 
+          height: 200px; 
+          box-shadow: #38495a 1px 2px 5px; 
+          padding-left: 10px; 
+        }
+        .dot1 {
+          height: 15px;
+          width: 15px;
+          background-color: lightpink;
+          border-radius: 50%;
+          display: inline-block; 
+          opacity: 70%;
+        }
+        .dot2 {
+          height: 15px;
+          width: 15px;
+          background-color: salmon;
+          border-radius: 50%;
+          display: inline-block; 
+          opacity: 70%;
+        }
+        .dot3 {
+          height: 15px;
+          width: 15px;
+          background-color: red;
+          border-radius: 50%;
+          display: inline-block; 
+          opacity: 50%;
+        }
+        .text-container{
+          position: fixed 10px; 
+          vertical-align: middle; 
+          padding-left: 20px;
+        } 
+        @import url('https://fonts.cdnfonts.com/css/bubble-letters'); 
+        .bub{
+          font-family: 'Bubble Letters'; 
+          font-size: 50px; 
+          color:salmon; 
+          display: inline-block; 
+          filter: brightness(160%); 
+          text-shadow: #38495a 2px 2px 5px; 
+        }
+        .bubhead{
+          font-family: 'Bubble Letters'; 
+          font-size: 55px; 
+          color:salmon; 
+          display: inline-block; 
+          filter: brightness(150%); 
+          text-shadow: #38495a 2px 2px 5px; 
+        }
+        .disclaimer{
+          color:beige; 
+          text-align: center; 
+        }
+        body{
+          color:linen; 
+          font-size: 22px;
+          background-color:#E4D8D8; 
+          font-family:Verdana, Geneva, Tahoma, sans-serif; 
+          text-align: justify;
+          background-image: linear-gradient(rgba(124, 102, 102, 0.589), rgba(0, 0, 0, 0.15)), url("https://img.freepik.com/free-photo/bench-two-trees-isolated-pink-background-monocrome-3d-rendering_181624-57851.jpg?w=996&t=st=1702655690~exp=1702656290~hmac=0a11cf434bdf8f3f5b4ede816e6121bb5d914b4090ef1fa03ff4a0cfafb4d139"); 
+          background-repeat: no-repeat; 
+          background-size: 1910px; 
+          text-shadow: #38495a 1px 1px 2px; 
+          filter: brightness(105%); 
+          backdrop-filter: blur(5px); 
+          padding-left: 10px; 
+          padding-right: 10px; 
+        }
+        .acc{
+          font-size: 20px; 
+          padding: 5%; 
+          margin-top: -5%; 
+          filter: brightness(110%); 
+        }
+        hr.h{
+          background-color: #E4D8D8;
+          height: 5px; 
+          border: none; 
+          box-shadow: darkslategrey 1px 2px 2px; 
+        }
+        hr.dis{ 
+          border-top: 2px dashed beige;
+        }
+        button {
+            padding: 10px 20px;  
+            border: none; 
+            color: white; 
+            background-color: salmon;
+            text-transform: uppercase;
+            margin: 0 10px 40px 0px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            font-size: 20px;
+            font-family: "Comfortaa", sans-serif;
+            border-radius: 4px;
+            transition: all 0.25s ease; 
+            box-shadow: #38495a 1px 2px 2px; 
+        }
+    </style>
+    <body>
+        <center><table style="width:100%"> 
+            <tr>
+            <th>LABEL</th>
+            <th>TYPE I</th>
+            <th>TYPE II</th>
+            <th>DESCRIPTION</th> 
+          </tr>
+          <tr>
+            <td>Risk (R)</td>
+            <td>High (H)</td>
+            <td>Low (L)</td>
+            <td>Your risk appetite for investment.</td>
+          </tr>
+          <tr>
+            <td>Focus (F)</td>
+            <td>Return (R)</td>
+            <td>ESG (E)</td>
+            <td>Philanthropic considerations of the implications and impacts of your investment options.</td>
+          </tr>
+          <tr>
+            <td>Term (T)</td>
+            <td>Long (L)</td>
+            <td>Short (S)</td>
+            <td>Time between investment and expected return.</td>
+          </tr>
+          <tr>
+            <td>Motive (M)</td>
+            <td>Data (D)</td>
+            <td>Qualitative (Q)</td>
+            <td>Information sources that you consider to influence your investment decisions.</td>
+          </tr>
+        </table></center> 
+        <br><br>  
+
+        <center><span class="dot1"></span></center><br><br> 
+        <center><span class="dot2"></span></center><br><br> 
+        <center><span class="dot3"></span></center><br>       
+
+        <center><h3> 
+          <div class="bub">
+            Now, what does {{ text }} predict about your invetsment-ality? 
+          </div>
+        </h3></center> 
+      
+        <div id="line2" class="col-lg-12"> 
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="letter-container">
+                R
+              </div>
+            </div>
+            <div class="col-sm-8" display: inline-block>
+              <div class="text-container">
+                <p>{{ p1 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br> 
+        <div id="line2" class="col-lg-12">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="letter-container">
+                F
+              </div> 
+            </div>
+            <div class="col-sm-8" display: inline-block>
+              <div class="text-container">
+                <p>{{ p2 }}</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br><br> 
+        <div id="line2" class="col-lg-12">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="letter-container">
+                T
+              </div>
+            </div>
+            <div class="col-sm-8" display: inline-block>
+              <div class="text-container">
+                <p>{{ p3 }}</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br> 
+        <div id="line2" class="col-lg-12">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="letter-container">
+                M
+              </div>
+            </div>
+            <div class="col-sm-8" display: inline-block>
+              <div class="text-container">
+                <p>{{ p4 }}</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br> 
+
+        <center><span class="dot1"></span></center><br><br> 
+        <center><span class="dot2"></span></center><br><br> 
+        <center><span class="dot3"></span></center><br>     
+
+        <h3><center><div class="bub">How Accurate is your RFTM?</div></center></h3> 
+        <div class="acc"> 
+          <p>Unfortunately, the RFTM system is currently not very accurate. Your RFTM prediction is made by a model trained on only approximately 50 survey responses. The testing accuracy has been relatively low, at around 65%. Although this would be about 10 times more accurate than purely guessing your RFTM, it is very likely to make mistakes.</p>  
+          <p>Furthr, even if the accuracy for your particular prediction was 100%, it may still not be a good characterization of your true investment-ality. This is because the training data was pre-processed such that only 2 possibilities of 4 attributes (R, F, T & M) were predicted by 8 demographic features. Your age, gender, work experience, etc. may not necessarily be the best predictors to say anything about your investment-ality, especially when they are ran through a K-Nearest-Neighbors model based on a limited sample size. For example, your nearest neighbors may be very different from you, because the distance between each neighbor may be very large (a sparse sample). For more information on KNN models, please feel free to visit <a href='https://www.ibm.com/topics/knn'>this website by IBM</a>.</p> 
+          <p>Even if they are good predictors, the interpretation of RFTM categories may still not be a good representation of your investment-ality, e.g., overgeneralizing or not comprehensive enough.</p> 
+          <p>Therefore, please don't be upset if you disagree with the RFTM explanation above! I recognize the limitations of my attempt, and will work on improving it. Thank you for participating! I hope the process was somewhat fun for your, and please feel free to let me know how accurate (or totally wrong) you find the predicted RFTM through the feedback fields below!</p>
+        </div> 
+        <br> 
+        <hr color="lightgray"> 
+        <h4><center>Feedback</center></h4> 
+        <form action="{{ url_for('ty') }}" method="post">
+          How accurate was the risk-attribute prediction for you?<br>
+          Please choose an option from below to send feedback.<br><br> 
+          <input type="radio" id="not" name="feedback" value="Not accurate at all">
+          <label for="not">Not accurate at all</label><br>
+          <input type="radio" id="somewhat" name="feedback" value="Somewhat relatable">
+          <label for="somewhat">Somewhat relatable</label><br>
+          <input type="radio" id="very" name="feedback" value="Very accurate">
+          <label for="very">Very accurate</label>
+          <br><br>
+          <input name="text_feedback" type="text" placeholder="Anything else you would want to share? (Optional)" style="height:200px;width:700;font-size:12pt" maxlength="500"> 
+          <br><br> 
+          <input type="submit" value="Send Feedback"> 
+        </form> 
+        <br><br>
+        <hr class="dis"> 
+        <div class="disclaimer">
+          <p><em>
+            <b>*DISCLAIMER:</b> The RFTM system is created for entertainment purposes only and should not be used, or be responsible, for influencing your future investment decisions. It is not founded upon any published scientific evidence or theories, and should not be used in any way other than leisure.
+          </em></p> 
+        </div> 
+        <hr class="dis"> 
+        <br> 
+        <center>
+          <b><a href="/"><button>Return to Homepage</button></a></b> 
+          <b><a href="/gallery"><button>View Gallery</button></a></b> 
+        </center> 
+        <br> 
+</body>
+</html> 
